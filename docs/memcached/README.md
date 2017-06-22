@@ -7,7 +7,7 @@ Memcached on QingCloud 将 Memcached 制作成App,　能直接在AppCenter 进�
 
 ### 准备
 
-在部署 App 之前，您需要创建一个 VPC 网络S和关联一个 Vxnet 私有网络，详情见 ([VPC 指南](https://docs.qingcloud.com/guide/vpc.html))
+在部署 App 之前，您需要创建一个 VPC 网络和关联一个 Vxnet 私有网络，详情见 ([VPC 指南](https://docs.qingcloud.com/guide/vpc.html))
 
 ### 1) 基本配置
 
@@ -49,8 +49,8 @@ Memcached on QingCloud 将 Memcached 制作成App,　能直接在AppCenter 进�
 
 Memcached 缓存服务支持多个缓存节点。当容量或者性能不足时，您可以通过增加缓存节点来提升。 
 ![](snapshot/scale_out.png)
+>默认的 Memcached 客户端使用简单 Hash 来进行数据分片，当增加或删除节点时可能会造成大量的缓存失效。可以采用支持一致性 Hash 算法的 Memcached 客户端来避免这个问题，例如[hash_ring](https://pypi.python.org/pypi/hash_ring) 
 
-`默认的 Memcached 客户端使用简单 Hash 来进行数据分片，当增加或删除节点时可能会造成大量的缓存失效。可以采用支持一致性 Hash 算法的 Memcached 客户端来避免这个问题，例如 [hash_ring](https://pypi.python.org/pypi/hash_ring)`
 
 下图为扩容之后的节点列表。
 ![](snapshot/scale_out_done.png)
