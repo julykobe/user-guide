@@ -61,7 +61,7 @@ Memcached 缓存服务支持多个缓存节点。当容量或者性能不足时�
 
 ![](snapshot/scale_up.png)
 
-＞扩容后可以通过threads和max_memory这两个配置项对缓存服务进行调优。
+>扩容后可以通过threads和max_memory这两个配置项对缓存服务进行调优。
 
 ## 监控
 我们提供了强大的监控和告警功能，帮助用户更好的管理和维护运行中的 Memcached 缓存集群。
