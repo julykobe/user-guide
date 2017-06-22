@@ -68,7 +68,3 @@ Memcached 缓存服务支持多个缓存节点。当容量或者性能不足时�
 
 ![](snapshot/monitor.png)
 
-## FAQ
-
-* VNC 登陆账户和密码是多少？
-  用户账号 ubuntu，密码 p12cHANgepwD，拥有 sudo 能力。
